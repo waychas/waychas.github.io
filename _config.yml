@@ -1,0 +1,6 @@
+name: Vecha Sumanth
+description: Personal Page
+baseurl: "" # Leave empty for your main domain
+url: "https://waychas.github.io"
+markdown: kramdown
+theme: null # We are using custom CSS, so keep this null
