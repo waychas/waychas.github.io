@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Vecha Sumanth</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --dim: #666666;
+            --border: #eeeeee;
+            --code-bg: #f9f9f9;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 80px 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content { max-width: 540px; width: 100%; }
+
+        header { margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+
+        .metadata {
+            font-family: "SF Mono", "Fira Code", monospace;
+            font-size: 12px;
+            color: var(--dim);
+            margin-bottom: 8px;
+        }
+
+        h1 { font-size: 20px; font-weight: 600; margin: 0; letter-spacing: -0.02em; }
+
+        /* Markdown Styling */
+        article p { font-size: 15px; margin-bottom: 24px; }
+        
+        article h2 { font-size: 16px; font-weight: 600; margin-top: 40px; }
+
+        code { 
+            font-family: "SF Mono", monospace; 
+            font-size: 13px; 
+            background: var(--code-bg); 
+            padding: 2px 4px; 
+            border-radius: 3px; 
+        }
+
+        pre { 
+            background: var(--code-bg); 
+            padding: 16px; 
+            overflow-x: auto; 
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        blockquote {
+            margin: 0;
+            padding-left: 20px;
+            border-left: 2px solid var(--text);
+            font-style: italic;
+            color: var(--dim);
+        }
+
+        nav { margin-top: 80px; padding-top: 20px; border-top: 1px solid var(--border); }
+        nav a { color: var(--text); text-decoration: none; font-size: 14px; }
+        nav a:hover { opacity: 0.5; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="metadata">PUBLISHED / {{ page.date | date: "%b %d, %Y" }}</div>
+            <h1>{{ page.title }}</h1>
+        </header>
+
+        <article>
+            {{ content }}
+        </article>
+
+        <nav>
+            <a href="/thoughts">← Back to Index</a>
+        </nav>
+    </div>
+</body>
+</html>

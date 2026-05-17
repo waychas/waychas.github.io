@@ -1,0 +1,33 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts | Vecha Sumanth</title>
+    <style>
+        /* Reuse the CSS from your landing page here */
+        body { background: #fff; font-family: sans-serif; padding: 80px 40px; display: flex; justify-content: center; }
+        .content { max-width: 540px; width: 100%; }
+        .post-link { display: flex; justify-content: space-between; text-decoration: none; color: #000; padding: 12px 0; border-bottom: 1px solid #eee; }
+        .post-link:hover { opacity: 0.5; }
+        .date { font-family: monospace; color: #666; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 style="font-size: 18px;">Thoughts</h1>
+        <div style="margin-top: 40px;">
+            {% for post in site.posts %}
+                <a href="{{ post.url }}" class="post-link">
+                    <span>{{ post.title }}</span>
+                    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                </a>
+            {% endfor %}
+        </div>
+        <nav style="margin-top: 60px;"><a href="/" style="color:#000; text-decoration: none; font-size: 14px;">← Home</a></nav>
+    </div>
+</body>
+</html>
