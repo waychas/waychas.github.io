@@ -3,46 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>waychas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Poster</title>
     <style>
+        /* System font stack for that 'native' tech feel */
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --dim: #666666;
+            --border: #eeeeee;
+        }
+
+        * { box-sizing: border-box; }
+
         body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 80px 40px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+        }
+
+        .content {
+            max-width: 540px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        .metadata {
+            font-size: 12px;
+            /*text-transform: uppercase;*/
+            letter-spacing: 0.1em;
+            color: var(--dim);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 600;
             margin: 0;
-            font-family: 'Poppins', sans-serif; /* Use the Poppins font */
-            background-color: #333333;
-            color: white;
+            letter-spacing: -0.02em;
         }
 
-        .container {
-            display: flex;
+        .intro {
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+
+        .intro p {
+            margin-bottom: 24px;
+        }
+
+        .status-tag {
+            display: inline-flex;
             align-items: center;
+            font-size: 12px;
+            color: var(--dim);
+            border: 1px solid var(--border);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 20px;
         }
 
-        .text {
-            font-size: 100px; /* Set the font size to 100px */
-            margin-right: 20px; /* Add some space between the text and the arrow */
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #22c55e;
+            border-radius: 50%;
+            margin-right: 8px;
         }
 
-        .arrow {
-            width: 20px;
-            height: 20px;
-            fill: #999999; /* Grey color for the arrow */
-            transform: rotate(45deg); /* Rotate the square to create an arrow */
+        nav {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            margin-right: 24px;
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.5;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* Subtle typewriter effect for the 'cracked' feel */
+        .mono {
+            font-family: "SF Mono", "Fira Code", monospace;
+            font-size: 13px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="text">Hi</div>
-        <a href="https://waychas.github.io/thoughts/">
-            <img src="https://cdn-icons-png.flaticon.com/512/106/106805.png" width="50" height="50">
-                <rect x="4" y="4" width="16" height="16" />
-            </svg>
-        </a>
+
+    <div class="content">
+        <header>
+            <span class="metadata">about</span>
+            <h1>Vecha Sumanth</h1>
+        </header>
+
+        <section class="intro">
+            <p>
+                Engineering at Oracle. Building for the long term and hoping to eventually jam with John Mayer.
+            </p>
+            <p>
+                hmu for collaboration
+            </p>
+            
+            
+
+        </section>
+
+        <nav>
+            <a href="https://waychas.github.io/thoughts/">Thoughts</a>
+            <a href="https://github.com/waychas">GitHub</a>
+            <a href="mailto:vecha.sumanth@gmail.com">Contact</a>
+        </nav>
     </div>
+
 </body>
 </html>
